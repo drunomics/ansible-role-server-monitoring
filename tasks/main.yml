@@ -1,0 +1,22 @@
+##
+# Main tasks
+#
+---
+- name: Ensure fetch directory exists
+  file: path={{ tool_installer_fetch_directory }} state=directory
+
+- name: Download tools
+  get_url:
+    url={{ item.value.url }}
+    dest={{ tool_installer_fetch_directory }}/{{ item.key }}-{{ item.value.version }}
+    mode="u+rx,g+rx,o+rx"
+    force=no
+  with_dict: "{{ tool_installer }}"
+
+- name: Make tools available in PATH
+  file: >
+    src={{ tool_installer_fetch_directory }}/{{ item.key }}-{{ item.value.version }}
+    dest={{ tool_installer_bin_directory }}/{{ item.key }}
+    state=link
+    force=true
+  with_dict: "{{ tool_installer }}"

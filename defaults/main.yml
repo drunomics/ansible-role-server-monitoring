@@ -1,0 +1,7 @@
+---
+# Role parameters
+
+tool_installer: {}
+
+tool_installer_bin_directory: /usr/local/bin
+tool_installer_fetch_directory: /opt/tools
