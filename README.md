@@ -1,9 +1,9 @@
-# drunomics.tool-installer
-[![Build Status](https://travis-ci.org/drunomics/ansible-role-tool-installer.svg?branch=master)](https://travis-ci.org/drunomics/ansible-role-tool-installer)
+# drunomics.server-monitoring
+[![Build Status](https://travis-ci.org/drunomics/ansible-role-server-monitoring.svg?branch=master)](https://travis-ci.org/drunomics/ansible-role-server-monitoring)
 
 Ansible role that installs various tools by downloading them.
 
-Distribution: Ubuntu (tested on 16.04)
+Distribution: Ubuntu (tested on 18.04)
 
 ## Requirements
 None.
@@ -15,12 +15,9 @@ None.
 
 Example which will install the tool phapp:
   
-    tool_installer:
-      phapp:
-        url: https://github.com/drunomics/phapp-cli/releases/download/0.6.0-beta1/phapp.phar
-        version: 0.6.0-beta1
-
+    server_monitoring:
+       :
+       
 Please check the documented variables defaults/main.yml.
 
-
-(c) 2018 drunomics GmbH. /  MIT License
+(c) 2019 drunomics GmbH. /  MIT License
