@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: drunomics
-  description: Install various tools.
+  description: Install server monitoring scripts.
   license: license MIT
   min_ansible_version: 2.2
   platforms:
